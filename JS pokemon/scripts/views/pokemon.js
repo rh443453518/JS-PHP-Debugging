@@ -12,7 +12,7 @@
 class Pokemon {
 	// class constructor, keep renderer as "full" as the compressed view
 	// was not implmeneted for this homework
-	constructor(name, weight, sprites, stats, types, renderer) {
+	contructor(name, weight, sprites, stats, types, renderer) {
 		this.name = name;
 		this.weight = weight;
 		this.sprites = sprites;

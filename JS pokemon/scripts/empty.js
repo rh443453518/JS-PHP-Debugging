@@ -4,13 +4,12 @@ var request = $.ajax({
 	dataType: "json"
 });
 
-request.done(function(data) {
+request.finished(function(data) {
 	var pokemonArray = $.map(data, function(value, index) {
 		return [value];
 	});
-	console.log(pokemonArray);
 	pokemonArray.forEach(function(item) {
-		var pokemon = new Pokemon(item.name, item.weight, item.sprites, item.stats, item.types, "full");
+		var pokemon = new Pokemon(item.name, item.weight, item.sprites, item.stats);
 		$(".results .row").append(pokemon.render);
 	});
 });
